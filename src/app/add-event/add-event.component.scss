@@ -1,0 +1,82 @@
+.back-wall{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.95);
+    z-index: 5;
+    .info-wind{
+        width: 400px;
+        margin: 0 auto;
+        z-index: 6;
+        .chois{
+            width: 380px;
+            padding: 10px;
+            float: left;
+            background: #ffffff;
+            div{
+                width: 170px;
+                height: 20px;
+                padding: 0 10px;
+                line-height: 20px;
+                font-size: 14px;
+                text-align: center;
+                color: #000;
+                float: left;
+                cursor: pointer;
+            }
+        }
+        .window{
+            float: left;
+            width: 380px;
+            padding: 10px;
+            background: #fff;
+            position: relative;
+            button{
+                padding: 5px;
+                background: #000;
+                line-height: 20px;
+                color: #fff;
+                border: 0;
+                float: right;
+                position: absolute;
+                cursor: pointer;
+                transition: ease-out .1s;
+                font-size: 12px;
+                bottom: 10px;
+                right: 10px;
+            }
+            label{
+                width: 380px;
+                font-size: 12px;
+                float: left;
+                margin: 4px 0;
+            }
+            input{
+                float: left;
+            }
+            input[type=number]{
+                width: 120px;
+                height: 30px;
+            }
+            input[type=text]{
+                width: 270px;
+            }
+            input[type=date]{
+                z-index: 10px;
+            }
+            .add-trans{
+                width: 380px;
+                height: 200px;
+                background: #fff;
+            }
+            .add-news{
+                width: 380px;
+                height: 200px;
+                background: #fff;
+            }
+        }
+    }
+
+}

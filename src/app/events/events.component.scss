@@ -1,0 +1,101 @@
+.the-list{
+  width: 500px;
+  padding: 0;
+  margin: 0 auto;
+  li{
+    width: 100%;
+    display: block;
+    float: left;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    -webkit-transition: ease-out .1s;
+    -moz-transition: ease-out .1s;
+    -o-transition: ease-out .1s;
+    transition: ease-out .1s;
+    .board-left{
+      width: 8px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #333;
+    }
+    .item-content{
+      float: left;
+      width: 480px;
+      padding: 5px 10px;
+      background: #fff;
+      position: relative;
+      font-size: 12px;
+      min-height: 50px;
+      cursor: pointer;
+      .date{
+        position: absolute;
+        font-size: 12px;
+        top: 2px;
+        right: -100px;
+        width: 110px;
+        text-align: center;
+        line-height: 20px;
+        background: rgb(0, 0, 0);
+        color: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
+      }
+      .symbol{
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        position: absolute;
+        left: -22px;
+        top: 2px;
+        background: rgb(0, 0, 0);
+        color: #fff;
+      }
+      .summval{
+        width: 180px;
+        float: left;
+        line-height: inherit;
+        text-align: center;
+      }
+      .from{
+        width: 300px;
+        float: left;
+      }
+    }
+    &:hover{
+      margin-left: 3px;
+    }
+  }
+}
+.sort-board{
+  width: 480px;
+  height: 24px;
+  padding: 2px 10px;
+  margin: 0 auto;
+  border-radius: 0 0 2px 2px;
+  background: #333;
+  div{
+    line-height: 12px;
+    font-size: 12px;
+    background: #fff;
+    color: #000;
+    padding: 4px 10px;
+    float: left;
+    cursor: pointer;
+    margin: 0 2px;
+  }
+  span{
+    display: block;
+    float: right;
+    height: 20px;
+    width: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 20px;
+    cursor: pointer;
+  }
+}

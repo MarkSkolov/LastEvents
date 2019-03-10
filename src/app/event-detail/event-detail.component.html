@@ -1,0 +1,22 @@
+<div class="back-black-wrp" *ngIf="isOpen"></div> 
+  <div class="info-wind" *ngIf="isOpen">
+    <span class="close" *ngIf="isOpen" (click)="closeModal()">Закрыть</span>
+    <div *ngIf="event.type === 'news'">
+      <h1 class="title"> {{ event.addition.title }} </h1>
+      <div class="text">{{ event.addition.text }}</div>
+      <div class="footer">
+        <div class="date">{{ event.date | date:"dd.MM.yyyy" }}</div>
+        <button (click)="readed(event)" *ngIf="event.addition.readed === false">Прочитано</button>
+      </div>
+    </div>
+
+    <div *ngIf="event.type === 'trans'">
+      <h1 class="title">Транзакция</h1>
+      <p class="info-item"><b>{{ event.addition.profit ? "Приход":"Расход"}}: </b>{{ event.addition.summ }} {{ event.addition.valuta }}</p>
+      <p class="info-item"><b>Транзакция от:</b> {{ event.addition.from }}</p>
+      <div class="footer">
+        <div class="date">{{ event.date | date:"dd.MM.yyyy" }}</div>
+        <button (click)="deleteEvent(event)">Удалить</button>
+      </div>
+    </div>
+  </div>

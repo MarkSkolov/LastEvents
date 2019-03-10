@@ -1,0 +1,43 @@
+<div class="back-wall" *ngIf="add">
+  <div class="info-wind">
+    <div class="chois">
+      <div (click)="show('trans')">Транзакция</div>
+      <div (click)="show('news')">Новость</div>
+    </div>
+    <div class="window">
+      <div class="add-trans" *ngIf="type === 'trans'">
+        <div class="form-item">
+          <label>Введите сумму:</label>
+          <input type="number" name="summ" [(ngModel)]="summ" >
+          <select class="form-control" name="valuta" [(ngModel)]="valuta">
+            <option  *ngFor="let valuta of currencies">
+                {{ valuta }}
+            </option>
+          </select>
+          <select class="form-control" name="company" [(ngModel)]="operation">
+            <option  *ngFor="let operation of operations">
+                {{ operation }}
+            </option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label>От кого:</label>
+          <input type="text" [(ngModel)]="from">
+        </div>
+        <button (click)='makeTrans(summ, valuta, operation, from)'>Добавить</button>
+      </div>
+
+      <div class="add-news" *ngIf="type === 'news'">
+        <div class="form-item">
+          <label>Заголовок:</label>
+          <input type="text" [(ngModel)]="title">
+        </div>
+        <div class="form-item">
+          <label>Текст:</label>
+          <textarea name="" id="" cols="38" rows="5"  [(ngModel)]="text"></textarea>
+        </div>
+        <button (click)='makeNews(title, text)'>Добавить</button>
+      </div>
+    </div>
+  </div>
+</div>

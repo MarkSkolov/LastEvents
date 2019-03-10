@@ -1,0 +1,26 @@
+<div class="sort-board">
+    <div (click)="sort('date')">По дате</div>
+    <div (click)="sort('type')">По типу</div>
+    <span (click)="addEvent()">+</span>
+</div>
+<ul class="the-list">
+  <li *ngFor="let event of (events | sort:subj:order)"
+      (click)="onSelect(event)">
+
+    <div class="item-content" *ngIf="event.type === 'news'" [style.opacity]="event.addition.readed === true ? '.2':'1'">
+      <div class="board-left"></div>
+      <div>{{ event.addition.title }}</div>
+    </div>
+
+    <div class="item-content" *ngIf="event.type === 'trans'">
+      <div class="board-left" [style.background]="event.addition.profit == true ? 'rgb(153, 255, 144)':'rgb(255, 144, 144)'"></div>
+      <div class="symbol" [style.background]="event.addition.profit == true ? 'rgb(153, 255, 144)':'rgb(255, 144, 144)'">{{ event.addition.profit ? '+' : '-' }}</div>
+      <div class="summval">{{ event.addition.summ }} {{ event.addition.valuta }}</div>
+      <div class="from">{{ event.addition.from }}</div>
+      <div class="date">{{ event.date | date:"dd.MM.yyyy" }} </div>
+    </div>
+
+  </li>
+</ul>
+<app-event-detail [event]="infoForWind" [isOpen]="isOpen" (isClosed)="closeEvent($event)" (deleting)="deleteEvent($event)"></app-event-detail>
+<app-add-event [add]="add" (isClosed)="closeAddWind($event)" (newEvent)="addNewEvent($event)"></app-add-event>
