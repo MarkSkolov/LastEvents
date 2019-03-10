@@ -27,7 +27,7 @@ export let MockEvent: Event[] = [
             profit: false,
             summ: 21400,
             valuta: "RUB",
-            from: "Максона Саныча"
+            from: "Николая Ивановича"
         } 
     },
     {
@@ -73,7 +73,7 @@ export let MockEvent: Event[] = [
             profit: false,
             summ: 21400,
             valuta: "RUB",
-            from: "Максона Саныча"
+            from: "Николая Ивановича"
         } 
     },
     {
