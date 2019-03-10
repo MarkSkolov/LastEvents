@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    padding: 0;
+    margin: 0;
+    background: rgb(231, 231, 231);
+}
+.contain-cnt{
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    .head{
+        width: 100%;
+        line-height: 50px;
+        font-size: 14px;
+        color: #fff;
+        background: #333;
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+    }
+}
